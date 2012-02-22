@@ -1,0 +1,748 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../src/cludg.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>
+cache-system</title>
+</head>
+<body>
+<div id="navbar">
+<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+<colgroup span="3">
+<col width="0*"/>
+<col width="0*"/>
+<col width="1*"/>
+</colgroup>
+<tr>
+<td align="left" valign="baseline">
+<a href="cludg.html">
+Prev:&nbsp;cludg</a>
+<br/>
+<a href="string-parser.html">
+Next:&nbsp;string-parser</a>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="left" valign="baseline">
+<span class="upchain">
+<b>
+cache-system</b>
+<br/>
+<a href="index.html">
+Index</a>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="cludg-doc-body">
+<h2>
+cache-system
+</h2>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Structure summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1737">
+meta-descriptor</a>
+</td>
+<td class="summary">
+</td>
+</tr>
+</table>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Function summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1748">
+belongs-p</a>
+</td>
+<td class="summary">
+desc package-name</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1747">
+cache-descriptor</a>
+</td>
+<td class="summary">
+descriptor index src-file dest-dir prefix output-type</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1746">
+cache-meta-descriptors</a>
+</td>
+<td class="summary">
+</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1745">
+clear-cache</a>
+</td>
+<td class="summary">
+</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1744">
+copy-meta-descriptor</a>
+</td>
+<td class="summary">
+meta-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1753">
+initialise-cache</a>
+</td>
+<td class="summary">
+o-dir o-type path-prefix <em>&amp;rest</em> filenames</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1750">
+lookup-meta-descriptor</a>
+</td>
+<td class="summary">
+desc <em>&amp;optional</em> desc-type package</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1751">
+lookup-meta-descriptor-anchor</a>
+</td>
+<td class="summary">
+desc <em>&amp;optional</em> desc-type package</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1752">
+lookup-meta-descriptor-href</a>
+</td>
+<td class="summary">
+desc <em>&amp;optional</em> desc-type package relative</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1742">
+make-meta-descriptor</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> desc (file &quot;&quot;) (anchor &quot;&quot;) (index -1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1739">
+meta-descriptor-anchor</a>
+</td>
+<td class="summary">
+meta-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1741">
+meta-descriptor-desc</a>
+</td>
+<td class="summary">
+meta-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1740">
+meta-descriptor-file</a>
+</td>
+<td class="summary">
+meta-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1749">
+meta-descriptor-href</a>
+</td>
+<td class="summary">
+meta-desc <em>&amp;optional</em> relative</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1738">
+meta-descriptor-index</a>
+</td>
+<td class="summary">
+meta-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cache-system.html#_g1743">
+meta-descriptor-p</a>
+</td>
+<td class="summary">
+object</td>
+</tr>
+</table>
+<div class="defstruct">
+<div class="defunsignatures">
+<a id="_g1737">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+meta-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Structure]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Holds a symbol-descriptor object with enough additional information to 
+ construct indexes for cross referencing and hyper link creation. 
+ </p>
+</div>
+<div class="defclass-initargs">
+</div>
+<div class="defclass-slots-doc">
+</div>
+<div class="defclass-generics">
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1738">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+meta-descriptor-index&nbsp;&nbsp;</td>
+<td class="lambda-list">
+meta-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns and (with setf) changes the index of the specified meta-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1739">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+meta-descriptor-anchor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+meta-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns and (with setf) changes the anchor of the specified meta-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1740">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+meta-descriptor-file&nbsp;&nbsp;</td>
+<td class="lambda-list">
+meta-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns and (with setf) changes the file of the specified meta-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1741">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+meta-descriptor-desc&nbsp;&nbsp;</td>
+<td class="lambda-list">
+meta-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns and (with setf) changes the desc of the specified meta-descriptor 
+ </p>
+</div>
+</div>
+</div>
+<div class="defstruct-defuns">
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1742">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+make-meta-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> desc (file &quot;&quot;) (anchor &quot;&quot;) (index -1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns a newly created meta-descriptor. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1744">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+copy-meta-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+meta-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns a copy of the specified meta-descriptor. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1743">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+meta-descriptor-p&nbsp;&nbsp;</td>
+<td class="lambda-list">
+object</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns T if the specified object is of type meta-descriptor. 
+ </p>
+</div>
+</div>
+</div>
+</div>
+<div class="defparam">
+<div class="defunsignatures">
+<a id="_g1735">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+*name-&gt;meta-decriptors*&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Variable]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defparam">
+<div class="defunsignatures">
+<a id="_g1736">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+*descriptor-&gt;meta-decriptors*&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Variable]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1745">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+clear-cache&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Clears meta descriptor cache. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1746">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+cache-meta-descriptors&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns all the meta-descriptors of the cache system. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1747">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+cache-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+descriptor index src-file dest-dir prefix output-type</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1748">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+belongs-p&nbsp;&nbsp;</td>
+<td class="lambda-list">
+desc package-name</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns T if the specified symbol-descriptor belongs to the named package. 
+ </p>
+<p>
+The package search will be case insensitive. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1749">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+meta-descriptor-href&nbsp;&nbsp;</td>
+<td class="lambda-list">
+meta-desc <em>&amp;optional</em> relative</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the meta href href that links the specified descriptor. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1750">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+lookup-meta-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+desc <em>&amp;optional</em> desc-type package</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the meta-descriptor structure if any that holds a symbol-descriptor 
+ that is eq to desc if desc if a symbol-descriptor object. If desc is a 
+ string that names a descriptor then the meta-descriptor that holds a 
+ symbol-descriptor with name desc and type desc-type is returned. 
+ </p>
+<p>
+If package is specified then the returned meta-descriptor must be located 
+ in the specified package. 
+ desc-type, if given can be a symbol specifying a class type or a string 
+ that should be equal to the desc-type slot of the symbol descriptor holds 
+ by the meta descriptor candidate. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1751">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+lookup-meta-descriptor-anchor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+desc <em>&amp;optional</em> desc-type package</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the meta anchor if any for the specified descriptor or named 
+ descriptor if desc is a string. (see: <a href="cache-system.html#_g1750">
+lookup-meta-descriptor</a>
+) 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1752">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+lookup-meta-descriptor-href&nbsp;&nbsp;</td>
+<td class="lambda-list">
+desc <em>&amp;optional</em> desc-type package relative</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the meta href if any that links the specified descriptor or named 
+ descriptor if desc is a string. If relative is given, it must be a string 
+ designator for a filename. The returned href will be computed relatively 
+ to this filename. (see: <a href="cache-system.html#_g1750">
+lookup-meta-descriptor</a>
+). 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1753">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+initialise-cache&nbsp;&nbsp;</td>
+<td class="lambda-list">
+o-dir o-type path-prefix <em>&amp;rest</em> filenames</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Initialises the cache used to creates anchor and meta links in the futur 
+ generated documentation. Returns as a multiple value a list of 
+ (list filename (list symbol-descriptor)) and the list of unhandled forms. 
+ </p>
+</div>
+</div>
+</div>
+<div class="cludg-footer">
+Generated by&nbsp;<a href="mailto:ihatchondo@common-lisp.net" lang="en">
+CLDOC</a>
+- 2012-02-21 18:04:56</div>
+</body>
+</html>

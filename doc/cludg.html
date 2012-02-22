@@ -1,0 +1,4269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../src/cludg.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>
+cludg</title>
+</head>
+<body>
+<div id="navbar">
+<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+<colgroup span="3">
+<col width="0*"/>
+<col width="0*"/>
+<col width="1*"/>
+</colgroup>
+<tr>
+<td align="left" valign="baseline">
+<a href="package.html">
+Prev:&nbsp;package</a>
+<br/>
+<a href="cache-system.html">
+Next:&nbsp;cache-system</a>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="left" valign="baseline">
+<span class="upchain">
+<b>
+cludg</b>
+<br/>
+<a href="index.html">
+Index</a>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="cludg-doc-body">
+<h2>
+cludg
+</h2>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Class summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1689">
+defclass-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1656"><em class="cl">structured-object-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1675">
+defconstant-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1660"><em class="cl">param-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1687">
+defgeneric-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1662"><em class="cl">lambda-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1690">
+define-condition-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1656"><em class="cl">structured-object-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1681">
+defmacro-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1662"><em class="cl">lambda-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1688">
+defmethod-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1662"><em class="cl">lambda-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1674">
+defpackage-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1651"><em class="cl">symbol-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1676">
+defparameter-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1660"><em class="cl">param-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1682">
+defsetf-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1662"><em class="cl">lambda-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1685">
+defsetf-long-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1682"><em class="cl">defsetf-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1683">
+defsetf-short-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1682"><em class="cl">defsetf-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1691">
+defstruct-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1656"><em class="cl">structured-object-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1699">
+defstruct-slot-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1665"><em class="cl">slot-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1678">
+deftype-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1660"><em class="cl">param-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1680">
+defun-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1662"><em class="cl">lambda-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1677">
+defvar-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1660"><em class="cl">param-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1625">
+driver</a>
+</td>
+<td class="summary">
+</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1700">
+in-package-form</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1651"><em class="cl">symbol-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1662">
+lambda-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1651"><em class="cl">symbol-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1660">
+param-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1651"><em class="cl">symbol-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1665">
+slot-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1651"><em class="cl">symbol-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1656">
+structured-object-descriptor</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1651"><em class="cl">symbol-descriptor</em></a></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1651">
+symbol-descriptor</a>
+</td>
+<td class="summary">
+</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1727">
+text</a>
+</td>
+<td class="summary">
+inherits from <a href="cludg.html#_g1625"><em class="cl">driver</em></a></td>
+</tr>
+</table>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Method summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1669">
+accessors</a>
+</td>
+<td class="summary">
+slot-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1666">
+allocation-type</a>
+</td>
+<td class="summary">
+slot-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1672">
+cname</a>
+</td>
+<td class="summary">
+slot-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1692">
+conc-name</a>
+</td>
+<td class="summary">
+defstruct-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1698">
+constructors</a>
+</td>
+<td class="summary">
+defstruct-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1696">
+copier</a>
+</td>
+<td class="summary">
+defstruct-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1679">
+deftype-args</a>
+</td>
+<td class="summary">
+deftype-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1653">
+desc-type</a>
+</td>
+<td class="summary">
+symbol-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1701">
+dest-package</a>
+</td>
+<td class="summary">
+in-package-form</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1627">
+dformat</a>
+</td>
+<td class="summary">
+sym-descriptor output-driver stream</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1628">
+dformat-documentation</a>
+</td>
+<td class="summary">
+sym-desc output-driver stream</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1652">
+doc</a>
+</td>
+<td class="summary">
+symbol-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1655">
+dpackage</a>
+</td>
+<td class="summary">
+symbol-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1686">
+extra-args</a>
+</td>
+<td class="summary">
+defsetf-long-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1626">
+extract-documentation</a>
+</td>
+<td class="summary">
+driver dest-dir filenames <em>&amp;rest</em> initargs</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1673">
+fully-qualified-name</a>
+</td>
+<td class="summary">
+symbol-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1659">
+inheritence</a>
+</td>
+<td class="summary">
+structured-object-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1668">
+initargs</a>
+</td>
+<td class="summary">
+slot-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1667">
+initform</a>
+</td>
+<td class="summary">
+slot-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1704">
+initialize-instance</a>
+</td>
+<td class="summary">
+(desc symbol-descriptor) <em>&amp;rest</em> rest</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1664">
+lambda-list</a>
+</td>
+<td class="summary">
+lambda-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1663">
+method-qualifiers</a>
+</td>
+<td class="summary">
+lambda-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1654">
+name</a>
+</td>
+<td class="summary">
+symbol-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1694">
+named</a>
+</td>
+<td class="summary">
+defstruct-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1697">
+predicate</a>
+</td>
+<td class="summary">
+defstruct-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1695">
+printer</a>
+</td>
+<td class="summary">
+defstruct-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1671">
+readers</a>
+</td>
+<td class="summary">
+slot-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1657">
+slot-accessors</a>
+</td>
+<td class="summary">
+structured-object-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1658">
+slots</a>
+</td>
+<td class="summary">
+structured-object-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1693">
+struct-type</a>
+</td>
+<td class="summary">
+defstruct-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1684">
+update-fn</a>
+</td>
+<td class="summary">
+defsetf-short-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1661">
+value</a>
+</td>
+<td class="summary">
+param-descriptor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1670">
+writers</a>
+</td>
+<td class="summary">
+slot-descriptor</td>
+</tr>
+</table>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Function summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1646">
+add-prefix-if-necessary</a>
+</td>
+<td class="summary">
+prefix filenames</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1638">
+cludg-mksym</a>
+</td>
+<td class="summary">
+<em>&amp;rest</em> parts</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1648">
+default-pathname</a>
+</td>
+<td class="summary">
+lisp-file dest-dir</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1634">
+extract-doc</a>
+</td>
+<td class="summary">
+forms</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1640">
+find-descriptor-handler</a>
+</td>
+<td class="summary">
+definer</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1718">
+find-option</a>
+</td>
+<td class="summary">
+key options</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1642">
+find-output-type</a>
+</td>
+<td class="summary">
+output-format</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1636">
+find-package-caseless</a>
+</td>
+<td class="summary">
+name</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1725">
+find-qualifiers-and-lambda-list</a>
+</td>
+<td class="summary">
+forms</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1650">
+get-asdf-system-files</a>
+</td>
+<td class="summary">
+asdf-module <em>&amp;optional</em> (directory &quot;&quot;)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1629">
+get-iso-date-time</a>
+</td>
+<td class="summary">
+</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1635">
+grok-new-lines</a>
+</td>
+<td class="summary">
+string</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1726">
+handle-slots</a>
+</td>
+<td class="summary">
+class-name slots</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1714">
+make-constructor</a>
+</td>
+<td class="summary">
+fname sname lambda-list given-p slots</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1715">
+make-copier</a>
+</td>
+<td class="summary">
+fname sname</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1713">
+make-defun</a>
+</td>
+<td class="summary">
+name lambda-list <em>&amp;rest</em> docs</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1649">
+make-output-pathname</a>
+</td>
+<td class="summary">
+lisp-file dest-dir output-type <em>&amp;optional</em> prefix</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1647">
+make-pathname-relative</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> from to</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1716">
+make-predicate</a>
+</td>
+<td class="summary">
+fname sname</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1717">
+make-printer</a>
+</td>
+<td class="summary">
+fname sname option</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1723">
+make-slot-accessors</a>
+</td>
+<td class="summary">
+type names name cname lambda-list control-string</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1724">
+make-slot-lambdas</a>
+</td>
+<td class="summary">
+class-desc lambda-list</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1712">
+mk-fname</a>
+</td>
+<td class="summary">
+s1 s2 <em>&amp;aux</em> (pkg (find-package-caseless *current-package*))</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1719">
+parse-defstruct-option</a>
+</td>
+<td class="summary">
+name struct-desc form typed-p named-p slot-defs</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1720">
+parse-defstruct-options</a>
+</td>
+<td class="summary">
+sname struct-desc forms <em>&amp;optional</em> slot-defs</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1721">
+parse-defstruct-slot</a>
+</td>
+<td class="summary">
+struct-desc slot</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1722">
+parse-defstruct-slots</a>
+</td>
+<td class="summary">
+struct-desc slots</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1641">
+register-output-type</a>
+</td>
+<td class="summary">
+output-format output-type</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1703">
+resolve-symbol-package-name</a>
+</td>
+<td class="summary">
+symbol <em>&amp;optional</em> package-name</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1702">
+split-name</a>
+</td>
+<td class="summary">
+name <em>&amp;optional</em> package-name</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1637">
+standard-io-name</a>
+</td>
+<td class="summary">
+string</td>
+</tr>
+</table>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Macro summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1639">
+define-descriptor-handler</a>
+</td>
+<td class="summary">
+definer arglist description <em>&amp;body</em> body</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1644">
+define-purgers</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> string-purger lambda-list-purger</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1643">
+remap-char</a>
+</td>
+<td class="summary">
+char stream <em>&amp;rest</em> clauses</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="cludg.html#_g1645">
+with-descriptor-read</a>
+</td>
+<td class="summary">
+(filespec descriptor) <em>&amp;body</em> body</td>
+</tr>
+</table>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1625">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+driver&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This is a protocol class. 
+ </p>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1651">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+symbol-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This is a protocol class and so must not be instancied. 
+ </p>
+</div>
+<div class="defclass-initargs">
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:package&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:name&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:type&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:doc&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="defclass-slots-doc">
+</div>
+<div class="defclass-generics">
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1652">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+doc&nbsp;&nbsp;</td>
+<td class="lambda-list">
+symbol-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the doc of the specified symbol-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1653">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+desc-type&nbsp;&nbsp;</td>
+<td class="lambda-list">
+symbol-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the type of the specified symbol-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1654">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+name&nbsp;&nbsp;</td>
+<td class="lambda-list">
+symbol-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the name of the specified symbol-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1655">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+dpackage&nbsp;&nbsp;</td>
+<td class="lambda-list">
+symbol-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the package of the specified symbol-descriptor 
+ </p>
+</div>
+</div>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1656">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+structured-object-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1651"><em class="cl">symbol-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This is a protocol class and so must not be instancied. 
+ </p>
+</div>
+<div class="defclass-initargs">
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:inheritence&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:slots&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="defclass-slots-doc">
+</div>
+<div class="defclass-generics">
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1657">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+slot-accessors&nbsp;&nbsp;</td>
+<td class="lambda-list">
+structured-object-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the slot-accessors of the specified structured-object-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1658">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+slots&nbsp;&nbsp;</td>
+<td class="lambda-list">
+structured-object-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the slots of the specified structured-object-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1659">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+inheritence&nbsp;&nbsp;</td>
+<td class="lambda-list">
+structured-object-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the inheritence of the specified structured-object-descriptor 
+ </p>
+</div>
+</div>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1660">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+param-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1651"><em class="cl">symbol-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This is a protocol class and so must not be instancied. 
+ </p>
+</div>
+<div class="defclass-initargs">
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:value&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="defclass-slots-doc">
+</div>
+<div class="defclass-generics">
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1661">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+value&nbsp;&nbsp;</td>
+<td class="lambda-list">
+param-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the value of the specified param-descriptor 
+ </p>
+</div>
+</div>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1662">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+lambda-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1651"><em class="cl">symbol-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This is a protocol class and so must not be instancied. 
+ </p>
+</div>
+<div class="defclass-initargs">
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:lambda-list&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:qualifiers&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="defclass-slots-doc">
+</div>
+<div class="defclass-generics">
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1663">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+method-qualifiers&nbsp;&nbsp;</td>
+<td class="lambda-list">
+lambda-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the qualifiers of the specified lambda-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1664">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+lambda-list&nbsp;&nbsp;</td>
+<td class="lambda-list">
+lambda-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the lambda-list of the specified lambda-descriptor 
+ </p>
+</div>
+</div>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1665">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+slot-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1651"><em class="cl">symbol-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descripor is made for describe the slots of 
+ class, conditon and structure. 
+ </p>
+</div>
+<div class="defclass-initargs">
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:class-name&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:readers&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:writers&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:accessors&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:initargs&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:initform&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:allocation-type&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="defclass-slots-doc">
+</div>
+<div class="defclass-generics">
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1666">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+allocation-type&nbsp;&nbsp;</td>
+<td class="lambda-list">
+slot-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the allocation-type of the specified slot-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1667">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+initform&nbsp;&nbsp;</td>
+<td class="lambda-list">
+slot-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the initform of the specified slot-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1668">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+initargs&nbsp;&nbsp;</td>
+<td class="lambda-list">
+slot-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the initargs of the specified slot-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1669">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+accessors&nbsp;&nbsp;</td>
+<td class="lambda-list">
+slot-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the accessors of the specified slot-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1670">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+writers&nbsp;&nbsp;</td>
+<td class="lambda-list">
+slot-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the writers of the specified slot-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1671">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+readers&nbsp;&nbsp;</td>
+<td class="lambda-list">
+slot-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the readers of the specified slot-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1672">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+cname&nbsp;&nbsp;</td>
+<td class="lambda-list">
+slot-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the cname of the specified slot-descriptor 
+ </p>
+</div>
+</div>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1674">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+defpackage-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1651"><em class="cl">symbol-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descripor is made for: defpackage 
+ </p>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1675">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+defconstant-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1660"><em class="cl">param-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descriptor is made for: defconstant. 
+ </p>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1676">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+defparameter-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1660"><em class="cl">param-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descriptor is made for: defparameter. 
+ </p>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1677">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+defvar-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1660"><em class="cl">param-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descriptor is made for: defvar. 
+ </p>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1678">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+deftype-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1660"><em class="cl">param-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descriptor is made for: deftype. 
+ </p>
+</div>
+<div class="defclass-initargs">
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:args&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="defclass-slots-doc">
+</div>
+<div class="defclass-generics">
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1679">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+deftype-args&nbsp;&nbsp;</td>
+<td class="lambda-list">
+deftype-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the args of the specified deftype-descriptor 
+ </p>
+</div>
+</div>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1680">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+defun-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1662"><em class="cl">lambda-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descriptor is made for: defun. 
+ </p>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1681">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+defmacro-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1662"><em class="cl">lambda-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descriptor is made for: defmacro. 
+ </p>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1682">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+defsetf-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1662"><em class="cl">lambda-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descriptor is made for: defsetf. 
+ </p>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1683">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+defsetf-short-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1682"><em class="cl">defsetf-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descriptor handles the short form of defsetf: 
+ (defsetf foo update-fn docstring) 
+ </p>
+</div>
+<div class="defclass-initargs">
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:update-fn&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="defclass-slots-doc">
+</div>
+<div class="defclass-generics">
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1684">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+update-fn&nbsp;&nbsp;</td>
+<td class="lambda-list">
+defsetf-short-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the update-fn of the specified defsetf-short-descriptor 
+ </p>
+</div>
+</div>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1685">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+defsetf-long-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1682"><em class="cl">defsetf-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descriptor handles the long form of defsetf: 
+ (defsetf name lambda-list (values-to-store) doc-string body) 
+ </p>
+</div>
+<div class="defclass-initargs">
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:extra-args&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="defclass-slots-doc">
+</div>
+<div class="defclass-generics">
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1686">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+extra-args&nbsp;&nbsp;</td>
+<td class="lambda-list">
+defsetf-long-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the extra-args of the specified defsetf-long-descriptor 
+ </p>
+</div>
+</div>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1687">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+defgeneric-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1662"><em class="cl">lambda-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descriptor is made for: defgeneric. 
+ </p>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1688">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+defmethod-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1662"><em class="cl">lambda-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descriptor is made for: defmethod. 
+ </p>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1689">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+defclass-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1656"><em class="cl">structured-object-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descriptor is made for: defclass. 
+ </p>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1690">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+define-condition-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1656"><em class="cl">structured-object-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descriptor is made for: define-condition. 
+ </p>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1691">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+defstruct-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1656"><em class="cl">structured-object-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descriptor is made for: defstruct. 
+ </p>
+</div>
+<div class="defclass-initargs">
+</div>
+<div class="defclass-slots-doc">
+</div>
+<div class="defclass-generics">
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1692">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+conc-name&nbsp;&nbsp;</td>
+<td class="lambda-list">
+defstruct-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the conc-name of the specified defstruct-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1693">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+struct-type&nbsp;&nbsp;</td>
+<td class="lambda-list">
+defstruct-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the struct-type of the specified defstruct-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1694">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+named&nbsp;&nbsp;</td>
+<td class="lambda-list">
+defstruct-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the named of the specified defstruct-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1695">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+printer&nbsp;&nbsp;</td>
+<td class="lambda-list">
+defstruct-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the printer of the specified defstruct-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1696">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+copier&nbsp;&nbsp;</td>
+<td class="lambda-list">
+defstruct-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the copier of the specified defstruct-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1697">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+predicate&nbsp;&nbsp;</td>
+<td class="lambda-list">
+defstruct-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the predicate of the specified defstruct-descriptor 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1698">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+constructors&nbsp;&nbsp;</td>
+<td class="lambda-list">
+defstruct-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the constructors of the specified defstruct-descriptor 
+ </p>
+</div>
+</div>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1699">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+defstruct-slot-descriptor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1665"><em class="cl">slot-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This descriptor is made for structure slots. 
+ </p>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1700">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+in-package-form&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1651"><em class="cl">symbol-descriptor</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="defclass-initargs">
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:in-package&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="defclass-slots-doc">
+</div>
+<div class="defclass-generics">
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1701">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+dest-package&nbsp;&nbsp;</td>
+<td class="lambda-list">
+in-package-form</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the in-package of the specified in-package-form 
+ </p>
+</div>
+</div>
+</div>
+</div>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1727">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+text&nbsp;&nbsp;</td>
+<td class="lambda-list">
+inherits from <a href="cludg.html#_g1625"><em class="cl">driver</em></a></td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Dummy CLUDG text driver. 
+ </p>
+</div>
+</div>
+<div class="defparam">
+<div class="defunsignatures">
+<a id="_g1624">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+*cludg-directory*&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Variable]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+The directory in which CLUDG is stored. 
+ </p>
+</div>
+</div>
+<div class="defparam">
+<div class="defunsignatures">
+<a id="_g1630">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+*descriptor-handlers*&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Variable]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Hash table of entries of the form (handler description), 
+ where definer is the car of the definition form handled (for example, 
+ DEFUN or DEFMACRO), handler is a function which takes the form as input 
+ and returns the descriptor object associated with. 
+ </p>
+</div>
+</div>
+<div class="defparam">
+<div class="defunsignatures">
+<a id="_g1631">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+*unhandled-forms*&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Variable]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+List of un-handled forms. This list is filled at runtime. 
+ </p>
+</div>
+</div>
+<div class="defparam">
+<div class="defunsignatures">
+<a id="_g1632">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+*current-package*&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Variable]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defparam">
+<div class="defunsignatures">
+<a id="_g1633">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+*output-types*&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Variable]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Cache for string filename extension - output-format association. 
+ </p>
+</div>
+</div>
+<div class="defparam">
+<div class="defunsignatures">
+<a id="_g1705">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+*copier-control-string*&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Variable]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Defstruct copier function control string for automatic documentation. 
+ </p>
+<p>
+This control string has one parameter. 
+ </p>
+</div>
+</div>
+<div class="defparam">
+<div class="defunsignatures">
+<a id="_g1706">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+*predicate-control-string*&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Variable]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Defstruct predicate function control string for automatic documentation. 
+ </p>
+<p>
+This control string has one parameter. 
+ </p>
+</div>
+</div>
+<div class="defparam">
+<div class="defunsignatures">
+<a id="_g1707">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+*printer-control-string*&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Variable]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Defstruct printer function control string for automatic documentation. 
+ </p>
+<p>
+This control string has one parameter. 
+ </p>
+</div>
+</div>
+<div class="defparam">
+<div class="defunsignatures">
+<a id="_g1708">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+*constructor-control-string*&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Variable]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Defstruct constructor function control string for automatic documentation. 
+ </p>
+<p>
+This control string has one parameter. 
+ </p>
+</div>
+</div>
+<div class="defparam">
+<div class="defunsignatures">
+<a id="_g1709">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+*slot-reader-control-string*&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Variable]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Slot reader method control string for automatic documentation. 
+ </p>
+<p>
+This control string has two parameters: slot-name, class-name. 
+ </p>
+</div>
+</div>
+<div class="defparam">
+<div class="defunsignatures">
+<a id="_g1710">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+*slot-writer-control-string*&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Variable]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Slot writer method control string for automatic documentation. 
+ </p>
+<p>
+This control string has two parameters: slot-name, class-name. 
+ </p>
+</div>
+</div>
+<div class="defparam">
+<div class="defunsignatures">
+<a id="_g1711">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+*slot-accessor-control-string*&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Variable]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Slot accessor method control string for automatic documentation. 
+ </p>
+<p>
+This control string has two parameters: slot-name, class-name. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1626">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+extract-documentation&nbsp;&nbsp;</td>
+<td class="lambda-list">
+driver dest-dir filenames <em>&amp;rest</em> initargs</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Reads all files specified in filenames and extract their 
+ documentation using the specified output-format driver. 
+ </p>
+<p>
+Because it is performing some symbol package resolution it needs packages 
+ definition to be, at least loaded. A simple way to satisfy this condition 
+ is to load, such as require would, the systems to be documented before 
+ starting documentation extraction. 
+ </p>
+<p>
+If filenames is an ASDF system then its components files will be retreived 
+ first. 
+ </p>
+<p>
+The extracted documentation will be written in a newly created file 
+ with the same name as the processed one but with the filename extension 
+ relatives to the output driver. If dest-dir is non NIL then it will be 
+ used to construct the output pathname, otherwise the output pathname will 
+ be constructed using the one of the currently processed file. The &amp;rest 
+ initargs argument is for driver specific options. 
+ </p>
+<p>
+All implementation must support the following option: 
+ </p>
+<ul>
+<li>
+<p>
+<span class="keyword">
+:path-prefix </span>
+(or null string): a string that will be used to dertermine 
+ the source folder where files to be processed can be found. If needed, 
+ this path-prefix (string) will be added to each filename of the source 
+ list. The destination folder is then constructed given this parameter. 
+ If specified, the path-prefix string is pruned from the destination 
+ folder in order to give the smallest pathname. Default to: 
+ *load-truename*. 
+ </p>
+<p>
+For instance, one could write: 
+ </p>
+<pre>
+    (extract-documentation 'html &quot;/foo/doc/html&quot; 
+       '(&quot;foo.lisp&quot; &quot;gee/bar.lisp&quot;) 
+       :path-prefix &quot;/home/zorglub/prj-foo/src/&quot;) </pre>
+<p>
+to extract the documentation of the files 'foo' and 'gee/bar', that 
+ are located in /home/zorglub/prj-foo/src/, under the following tree: 
+ /foo/doc/html/foo.html and /foo/doc/html/gee/bar.html. 
+ </p>
+<p>
+But if an ASDF system is given for filenames then the <span class="keyword">
+:path-prefix </span>
+
+ will be found using asdf:component-relative-pathname method. Then to 
+ extract the documentation of an ASDF system one could write: 
+ </p>
+<pre>
+    (extract-documentation 'html &quot;/foo/doc/html&quot; 
+       (asdf:find-system :the-foo-system)) </pre>
+</li>
+</ul>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1627">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+dformat&nbsp;&nbsp;</td>
+<td class="lambda-list">
+sym-descriptor output-driver stream</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Writes the given symbol-descriptor on the stream in the 
+ wanted output format using the specified output driver. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1628">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+dformat-documentation&nbsp;&nbsp;</td>
+<td class="lambda-list">
+sym-desc output-driver stream</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Writes the given symbol-descriptor documentation on the 
+ stream in the wanted output format using the specified output driver. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1673">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+fully-qualified-name&nbsp;&nbsp;</td>
+<td class="lambda-list">
+symbol-descriptor</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the string that represent the fully qualified 
+ name of the given symbol-descriptor. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1704">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+initialize-instance&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(desc symbol-descriptor) <em>&amp;rest</em> rest</td>
+<td class="symbol-type">
+&nbsp;[After&nbsp;method]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1629">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+get-iso-date-time&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns string with date and time according to ISO 8601. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1634">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+extract-doc&nbsp;&nbsp;</td>
+<td class="lambda-list">
+forms</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the first string found in the given list of forms. 
+ </p>
+<p>
+NIL is returned if no string is found before the first non 
+ declare form. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1635">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+grok-new-lines&nbsp;&nbsp;</td>
+<td class="lambda-list">
+string</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns a list of the string lines contained in the given string. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1636">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+find-package-caseless&nbsp;&nbsp;</td>
+<td class="lambda-list">
+name</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1637">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+standard-io-name&nbsp;&nbsp;</td>
+<td class="lambda-list">
+string</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1638">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+cludg-mksym&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;rest</em> parts</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns a symbol name made from the concatenation of the given parts. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1640">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+find-descriptor-handler&nbsp;&nbsp;</td>
+<td class="lambda-list">
+definer</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Given the car of a form, finds the appropriate description 
+ handler for the form if one exists. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1641">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+register-output-type&nbsp;&nbsp;</td>
+<td class="lambda-list">
+output-format output-type</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Register the filename extension (a string) that will be 
+ associated with the specified output-format. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1642">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+find-output-type&nbsp;&nbsp;</td>
+<td class="lambda-list">
+output-format</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the filename extension (a string) that is 
+ associated to the specified output-format. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1646">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+add-prefix-if-necessary&nbsp;&nbsp;</td>
+<td class="lambda-list">
+prefix filenames</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Adds the specified prefix to each filename when necessary. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1647">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+make-pathname-relative&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> from to</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the relative pathname that goes from `from' to `to'. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1648">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+default-pathname&nbsp;&nbsp;</td>
+<td class="lambda-list">
+lisp-file dest-dir</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the common directories between the lisp-file and the dest-dir. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1649">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+make-output-pathname&nbsp;&nbsp;</td>
+<td class="lambda-list">
+lisp-file dest-dir output-type <em>&amp;optional</em> prefix</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the pathname of the output file where to write the documentation 
+ to. The resulting pathname will be relative to the dest-dir. Any common 
+ pathname denominator between the lisp-file truename and the dest-dir 
+ truename will be pruned. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1650">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+get-asdf-system-files&nbsp;&nbsp;</td>
+<td class="lambda-list">
+asdf-module <em>&amp;optional</em> (directory &quot;&quot;)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1702">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+split-name&nbsp;&nbsp;</td>
+<td class="lambda-list">
+name <em>&amp;optional</em> package-name</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1703">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+resolve-symbol-package-name&nbsp;&nbsp;</td>
+<td class="lambda-list">
+symbol <em>&amp;optional</em> package-name</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the home package name of symbol and the name of symbol. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1712">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+mk-fname&nbsp;&nbsp;</td>
+<td class="lambda-list">
+s1 s2 <em>&amp;aux</em> (pkg (find-package-caseless *current-package*))</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1713">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+make-defun&nbsp;&nbsp;</td>
+<td class="lambda-list">
+name lambda-list <em>&amp;rest</em> docs</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1714">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+make-constructor&nbsp;&nbsp;</td>
+<td class="lambda-list">
+fname sname lambda-list given-p slots</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1715">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+make-copier&nbsp;&nbsp;</td>
+<td class="lambda-list">
+fname sname</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1716">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+make-predicate&nbsp;&nbsp;</td>
+<td class="lambda-list">
+fname sname</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1717">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+make-printer&nbsp;&nbsp;</td>
+<td class="lambda-list">
+fname sname option</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1718">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+find-option&nbsp;&nbsp;</td>
+<td class="lambda-list">
+key options</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1719">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+parse-defstruct-option&nbsp;&nbsp;</td>
+<td class="lambda-list">
+name struct-desc form typed-p named-p slot-defs</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1720">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+parse-defstruct-options&nbsp;&nbsp;</td>
+<td class="lambda-list">
+sname struct-desc forms <em>&amp;optional</em> slot-defs</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1721">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+parse-defstruct-slot&nbsp;&nbsp;</td>
+<td class="lambda-list">
+struct-desc slot</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1722">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+parse-defstruct-slots&nbsp;&nbsp;</td>
+<td class="lambda-list">
+struct-desc slots</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1723">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+make-slot-accessors&nbsp;&nbsp;</td>
+<td class="lambda-list">
+type names name cname lambda-list control-string</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1724">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+make-slot-lambdas&nbsp;&nbsp;</td>
+<td class="lambda-list">
+class-desc lambda-list</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1725">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+find-qualifiers-and-lambda-list&nbsp;&nbsp;</td>
+<td class="lambda-list">
+forms</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the list of qualifiers if any and the arguments lambda-list. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1726">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+handle-slots&nbsp;&nbsp;</td>
+<td class="lambda-list">
+class-name slots</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns a list of slot-descriptor object that represent the 
+ given list slot definition. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1639">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+define-descriptor-handler&nbsp;&nbsp;</td>
+<td class="lambda-list">
+definer arglist description <em>&amp;body</em> body</td>
+<td class="symbol-type">
+&nbsp;[Macro]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Defines a new documentation handler. DEFINER is the car of the 
+ definition form handled (e.g., defun), DESCRIPTION is a one-word 
+ string equivalent of definer (e.g., &quot;function&quot;), and ARGLIST 
+ and BODY together define a function that takes the form as input 
+ and returns the descriptor object of the form. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1643">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+remap-char&nbsp;&nbsp;</td>
+<td class="lambda-list">
+char stream <em>&amp;rest</em> clauses</td>
+<td class="symbol-type">
+&nbsp;[Macro]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1644">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+define-purgers&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> string-purger lambda-list-purger</td>
+<td class="symbol-type">
+&nbsp;[Macro]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Defines two functions of one parameter to purge from dangerous characters: 
+ </p>
+<ul>
+<li>
+<p>
+<span class="keyword">
+:string-purger </span>
+(name clauses &amp;rest options): 
+ Defines a function of one parameter, a string, that will purge 
+ that string of any `dangerous' characters for your driver. 
+ </p>
+<ul>
+<li>
+<p>
+name (symbol): the name of the defined string purger function. 
+ </p>
+</li>
+<li>
+<p>
+clauses (list): a list of pair as: (character replacement-string). 
+ </p>
+</li>
+<li>
+<p>
+options (list): supported options: (:documentation string). 
+ </p>
+</li>
+</ul>
+</li>
+<li>
+<p>
+<span class="keyword">
+:lambda-list-purger </span>
+(name clauses &amp;rest options): 
+ Defines a function of one parameter, a lambda-list, that will purge 
+ that lambda-list of any `dangerous' characters for your driver. 
+ </p>
+<ul>
+<li>
+<p>
+name (symbol): the name of the defined lambda-list purger function. 
+ </p>
+</li>
+<li>
+<p>
+clauses (list): a list of pair as: (symbol replacement-string). 
+ The symbols are the Common Lisp symbols that might occures in 
+ lambda-list. 
+ </p>
+</li>
+<li>
+<p>
+options (list): supported options: (:documentation string). 
+ </p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1645">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+with-descriptor-read&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(filespec descriptor) <em>&amp;body</em> body</td>
+<td class="symbol-type">
+&nbsp;[Macro]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+with-descriptor-read uses open to create a file stream to file named by 
+ filespec. Filespec is the name of the file to be opened. 
+ </p>
+<p>
+with-descriptor-read evaluates the body as an implicit progn with the 
+ descriptor bound to the successive values returned by the handler of the 
+ currently readed form. If no handler exists then the name of the readed 
+ form will be added to the list of unhandled forms: *unhandled-forms*. 
+ </p>
+<p>
+When control leaves the body, either normally or abnormally (such as by 
+ use of throw), the file is automatically closed. 
+ </p>
+</div>
+</div>
+</div>
+<div class="cludg-footer">
+Generated by&nbsp;<a href="mailto:ihatchondo@common-lisp.net" lang="en">
+CLDOC</a>
+- 2012-02-21 18:04:56</div>
+</body>
+</html>

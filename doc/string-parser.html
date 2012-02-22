@@ -1,0 +1,1756 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../src/cludg.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>
+string-parser</title>
+</head>
+<body>
+<div id="navbar">
+<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+<colgroup span="3">
+<col width="0*"/>
+<col width="0*"/>
+<col width="1*"/>
+</colgroup>
+<tr>
+<td align="left" valign="baseline">
+<a href="cache-system.html">
+Prev:&nbsp;cache-system</a>
+<br/>
+<a href="html.html">
+Next:&nbsp;html</a>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="left" valign="baseline">
+<span class="upchain">
+<b>
+string-parser</b>
+<br/>
+<a href="index.html">
+Index</a>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="cludg-doc-body">
+<h2>
+string-parser
+</h2>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Constant summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1757">
++default-code-prefix+</a>
+</td>
+<td class="summary">
+&quot;;;; &quot;</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1755">
++default-link-delimiters+</a>
+</td>
+<td class="summary">
+'(#\{ #\})</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1758">
++default-section-names+</a>
+</td>
+<td class="summary">
+'(&quot;Arguments and Values:&quot; &quot;Side Effects:&quot; &quot;Affected By:&quot; &quot;Exceptional Situations:&quot; &quot;See Also:&quot;
+  &quot;Notes:&quot;)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1756">
++default-section-prefix+</a>
+</td>
+<td class="summary">
+&quot;* &quot;</td>
+</tr>
+</table>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Class summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1759">
+doctree</a>
+</td>
+<td class="summary">
+</td>
+</tr>
+</table>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Method summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1770">
+add-section</a>
+</td>
+<td class="summary">
+doctree section-name string <em>&amp;optional</em> tree</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1774">
+add-to-bulleted-list</a>
+</td>
+<td class="summary">
+doctree string level</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1773">
+add-to-bulleted-list-item</a>
+</td>
+<td class="summary">
+doctree string</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1772">
+add-to-code-block</a>
+</td>
+<td class="summary">
+doctree string <em>&amp;optional</em> subtree</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1771">
+add-to-paragraph</a>
+</td>
+<td class="summary">
+doctree string <em>&amp;optional</em> subtree</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1767">
+bulleted-list</a>
+</td>
+<td class="summary">
+doctree level</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1760">
+code-prefix</a>
+</td>
+<td class="summary">
+doctree</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1776">
+create-doctree-from-string</a>
+</td>
+<td class="summary">
+type strings <em>&amp;key</em> <em>&amp;allow-other-keys</em></td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1766">
+doc-section-p</a>
+</td>
+<td class="summary">
+doctree string</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1763">
+doctree-tree</a>
+</td>
+<td class="summary">
+doctree</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1775">
+handle-string</a>
+</td>
+<td class="summary">
+doctree string</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1768">
+last-list-item</a>
+</td>
+<td class="summary">
+doctree level</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1764">
+link-delimiters</a>
+</td>
+<td class="summary">
+doctree</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1765">
+link-found-p</a>
+</td>
+<td class="summary">
+doctree word words</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1769">
+paragraph-handle-line</a>
+</td>
+<td class="summary">
+doctree string <em>&amp;optional</em> subtree</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1761">
+section-names</a>
+</td>
+<td class="summary">
+doctree</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1762">
+section-prefix</a>
+</td>
+<td class="summary">
+doctree</td>
+</tr>
+</table>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Function summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1787">
+block-list-p</a>
+</td>
+<td class="summary">
+tree</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1792">
+close-paragraph</a>
+</td>
+<td class="summary">
+doctree</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1790">
+code-block-p</a>
+</td>
+<td class="summary">
+tree</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1788">
+item-p</a>
+</td>
+<td class="summary">
+tree</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1779">
+make-item-prefix</a>
+</td>
+<td class="summary">
+depth</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1777">
+make-tree</a>
+</td>
+<td class="summary">
+tag</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1789">
+paragraph-p</a>
+</td>
+<td class="summary">
+tree</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1793">
+split</a>
+</td>
+<td class="summary">
+string <em>&amp;optional</em> (word-separator '(#\  #\Tab))</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1783">
+start-para-p</a>
+</td>
+<td class="summary">
+prev string</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1782">
+starts-with</a>
+</td>
+<td class="summary">
+string prefix <em>&amp;optional</em> ignore-left-whitespace-p</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1791">
+string-bulleted-item-p</a>
+</td>
+<td class="summary">
+string level item-prefix-maker</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1778">
+tree-add</a>
+</td>
+<td class="summary">
+element tree</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1786">
+tree-p</a>
+</td>
+<td class="summary">
+object</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1785">
+tree-tag</a>
+</td>
+<td class="summary">
+tree</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1780">
+trim-left-spaces</a>
+</td>
+<td class="summary">
+string</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1781">
+trim-prefix</a>
+</td>
+<td class="summary">
+prefix string <em>&amp;key</em> (replace-prefix t)</td>
+</tr>
+</table>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Macro summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="string-parser.html#_g1784">
+with-tree-loop</a>
+</td>
+<td class="summary">
+(var tree) <em>&amp;body</em> body</td>
+</tr>
+</table>
+<div class="defclass">
+<div class="defunsignatures">
+<a id="_g1759">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+doctree&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Class]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This class will be used to represent the doc string 
+ structure. Context such as paragraph and bulleted list will be 
+ repesented as vector block. This is used to retreive the context 
+ the documentation writer has indicated by its 'Do What I Mean' block. 
+ </p>
+<p>
+It recognizes both indent and empty-line paragraph breaks, bulleted lists, 
+ code sample, hyper link and sections (like in the Hyperspec). 
+ </p>
+<p>
+For bulleted lists the grammar can be specified using the 
+ <span class="keyword">
+:item-prefix-maker </span>
+option of the driver. To end itemized list, just add 
+ a blank line after the last item. The depth of bulleted lists is not 
+ constrained, but if you start sub bulleted list then a blank line will 
+ end the current one and all parents at the same time. Otherwise said, 
+ like here, no other paragraph will be permitted in an item after its 
+ sub list items. 
+ </p>
+<p>
+The sublists item designator will obey to the following grammar unless 
+ you have specified your own grammar (see the <span class="keyword">
+:item-prefix-maker </span>
+option): 
+ </p>
+<ul>
+<li>
+<p>
+(- ) is the first level of list item prefix. 
+ </p>
+</li>
+<li>
+<p>
+(-- ) is the second level of list item prefix. 
+ </p>
+</li>
+<li>
+<p>
+(--- ) is the third level of list item prefix and so on. 
+ </p>
+</li>
+</ul>
+<p>
+Use the following options to customize the parser: 
+ </p>
+<ul>
+<li>
+<p>
+<span class="keyword">
+:item-prefix-maker </span>
+(function): a designator for a function of one 
+ argument. Its argument will be an (integer 1 *) that represents the 
+ depth of the list. The return value is the corresponding string prefix 
+ designator for bulleted list (sublist) items of the specified depth. 
+ </p>
+</li>
+<li>
+<p>
+<span class="keyword">
+:code-prefix </span>
+(string): a string that designates a prefix for code snipet 
+ insertion in the documentation string. It must prefix all lines of code 
+ in the documentation string. 
+ The default value is: <a href="string-parser.html#_g1757">
++default-code-prefix+</a>
+. 
+ For exemple: 
+ </p>
+<pre>
+    (defun cludg-sample (bar) 
+       &quot;How to prefix code snipet in the documentation string: 
+        ;;; (setf *print-case* :downcase) 
+        You are, of course, not limited to one line snipet.&quot; 
+       (do-nothing)) </pre>
+</li>
+<li>
+<p>
+<span class="keyword">
+:section-prefix </span>
+(string): a string that will be used to determine if a 
+ section must be started or not if found at the beginning (ignoring left 
+ whitespaces) of the line. The default value is: 
+ <a href="string-parser.html#_g1756">
++default-section-prefix+</a>
+. 
+ </p>
+</li>
+<li>
+<p>
+<span class="keyword">
+:section-names </span>
+(string list): a list of string indicating the section 
+ names. This must be used in conjonction with the section-prefix. 
+ For instance start a line as follows: '* See Also:'. Default value is: 
+ <a href="string-parser.html#_g1758">
++default-section-names+</a>
+. 
+ </p>
+</li>
+<li>
+<p>
+<span class="keyword">
+:link-delimiters </span>
+(list of two character): a list of two characters that 
+ indicates the link opening and closing characters. Default value is: 
+ <a href="string-parser.html#_g1755">
++default-link-delimiters+</a>
+. Link grammar: 
+ [opening-char(URL | defun | defclass | ...)closing-char]. If the hyper 
+ link can be resolved. 
+ </p>
+</li>
+</ul>
+</div>
+<div class="defclass-initargs">
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:section-prefix&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:section-names&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:link-delimiters&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:code-prefix&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+:item-prefix-maker&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Initarg]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="defclass-slots-doc">
+</div>
+<div class="defclass-generics">
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1760">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+code-prefix&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the code-prefix of the specified doctree 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1761">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+section-names&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the section-names of the specified doctree 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1762">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+section-prefix&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the section-prefix of the specified doctree 
+ </p>
+</div>
+</div>
+</div>
+</div>
+<div class="defconstant">
+<div class="defunsignatures">
+<a id="_g1755">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
++default-link-delimiters+&nbsp;&nbsp;</td>
+<td class="lambda-list">
+'(#\{ #\})</td>
+<td class="symbol-type">
+&nbsp;[Constant]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defconstant">
+<div class="defunsignatures">
+<a id="_g1756">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
++default-section-prefix+&nbsp;&nbsp;</td>
+<td class="lambda-list">
+&quot;* &quot;</td>
+<td class="symbol-type">
+&nbsp;[Constant]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defconstant">
+<div class="defunsignatures">
+<a id="_g1757">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
++default-code-prefix+&nbsp;&nbsp;</td>
+<td class="lambda-list">
+&quot;;;; &quot;</td>
+<td class="symbol-type">
+&nbsp;[Constant]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defconstant">
+<div class="defunsignatures">
+<a id="_g1758">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
++default-section-names+&nbsp;&nbsp;</td>
+<td class="lambda-list">
+'(&quot;Arguments and Values:&quot; &quot;Side Effects:&quot; &quot;Affected By:&quot; &quot;Exceptional Situations:&quot; &quot;See Also:&quot;
+  &quot;Notes:&quot;)</td>
+<td class="symbol-type">
+&nbsp;[Constant]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defparam">
+<div class="defunsignatures">
+<a id="_g1794">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+*newline*&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Variable]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1763">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+doctree-tree&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the tree that represent this doctree instance. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1764">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+link-delimiters&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns as a multiple value the left and right 
+ characters that delimits a hyper link in a documentation string. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1765">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+link-found-p&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree word words</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns T and the length (in words) if any hyper link is 
+ found. An hyper link will be found if the first character of word is equal 
+ to the specified doctree link-delimiters open-char and if any word of the 
+ (word . words) ends with the specified doctree link-delimiters 
+ closing-char. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1766">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+doc-section-p&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree string</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+If the doctre section prefix delimiter is a prefix of the 
+ given string then returns as a multiple value the string without section 
+ prefix delimiter, and the section name. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1767">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+bulleted-list&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree level</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the bulleted list of given level. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1768">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+last-list-item&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree level</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the last item of the bulleted list of given 
+ level. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1769">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+paragraph-handle-line&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree string <em>&amp;optional</em> subtree</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This method is typically invoked within add-to-paragraph. 
+ </p>
+<p>
+It insert the given string in the doctree tree or in the subtree if given. 
+ </p>
+<p>
+This the place for word recognition ; with the default implemention lisp 
+ keyword will be recognized and added within a keyword subtree block. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1770">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+add-section&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree section-name string <em>&amp;optional</em> tree</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Insert a section of title section-name in the specified 
+ doctree-tree (or subtree if specified). Any opened paragraph will be closed 
+ before. Then if the result of trimming the section-name of string result in 
+ a non empty string then the remaining substring will be added in a newly 
+ opened paragraph. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1771">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+add-to-paragraph&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree string <em>&amp;optional</em> subtree</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Insert the given string in the last paragraph of the 
+ doctree tree or in the subtree if given. A paragraph will opened when 
+ needed before inserting the string. New paragraph will be opened under 
+ the following circumstances: 
+ </p>
+<ul>
+<li>
+<p>
+If the last element in the tree is not a paragraph. 
+ </p>
+</li>
+<li>
+<p>
+If given string is empty and the previous paragraph is not empty. 
+ </p>
+</li>
+<li>
+<p>
+If the last line of the paragraph ends with #. and has less left 
+ #Space characters than the given one. 
+ </p>
+</li>
+</ul>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1772">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+add-to-code-block&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree string <em>&amp;optional</em> subtree</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Insert the given string, after removing its code-prefix, 
+ in the last code-block of the specified doctree (or subtree if specified). 
+ A new code-block will be opened in the doctree, or in the subtree, if the 
+ last block is not a code-block. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1773">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+add-to-bulleted-list-item&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree string</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Adds a string to the latest item of the latest most inner 
+ bulleted list. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1774">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+add-to-bulleted-list&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree string level</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Adds an item to the latest most inner bulleted list of 
+ the given level. If no such level of bulleted list exists, then it will 
+ be created. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1775">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+handle-string&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree string</td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Adds a string into the doctree. This method will be 
+ responsible for deciding in which subtree the given string should be 
+ added. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1776">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+create-doctree-from-string&nbsp;&nbsp;</td>
+<td class="lambda-list">
+type strings <em>&amp;key</em> <em>&amp;allow-other-keys</em></td>
+<td class="symbol-type">
+&nbsp;[Generic&nbsp;function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the document tree represented by the given 
+ strings when parsed with some Do What I Mean functions. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1777">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+make-tree&nbsp;&nbsp;</td>
+<td class="lambda-list">
+tag</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1778">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+tree-add&nbsp;&nbsp;</td>
+<td class="lambda-list">
+element tree</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Adds the specified element in the given tree. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1779">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+make-item-prefix&nbsp;&nbsp;</td>
+<td class="lambda-list">
+depth</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the desired list item designator according to te given depth. 
+ The depth is an integer greater than zero - aka: (integer 1 *). 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1780">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+trim-left-spaces&nbsp;&nbsp;</td>
+<td class="lambda-list">
+string</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns a substring of string, with all Tab and Space characters stripped 
+ off the beginning. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1781">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+trim-prefix&nbsp;&nbsp;</td>
+<td class="lambda-list">
+prefix string <em>&amp;key</em> (replace-prefix t)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns a new string that does not contain prefix anymore. Left white spaces 
+ will be ignored but kept. Prefix will be replace by as many space characters 
+ than its length if replace-prefix is T. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1782">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+starts-with&nbsp;&nbsp;</td>
+<td class="lambda-list">
+string prefix <em>&amp;optional</em> ignore-left-whitespace-p</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns T if the designed string starts with the desired string prefix. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1783">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+start-para-p&nbsp;&nbsp;</td>
+<td class="lambda-list">
+prev string</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns T if the given string correspond to the beginning of a paragraph 
+ in regards to the previous one. Otherwise said: If prev the previous one 
+ ends with #. and string the next one has more left white space than the 
+ previous one. Otherwise NIL is returned. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1785">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+tree-tag&nbsp;&nbsp;</td>
+<td class="lambda-list">
+tree</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the tag of the specified tree. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1786">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+tree-p&nbsp;&nbsp;</td>
+<td class="lambda-list">
+object</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns T if the specified object is a doctree tree. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1787">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+block-list-p&nbsp;&nbsp;</td>
+<td class="lambda-list">
+tree</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns T if the specified tree represent a list. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1788">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+item-p&nbsp;&nbsp;</td>
+<td class="lambda-list">
+tree</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns T if the specified tree represent a item of a list. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1789">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+paragraph-p&nbsp;&nbsp;</td>
+<td class="lambda-list">
+tree</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns T if the specified tree represent a paragraph. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1790">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+code-block-p&nbsp;&nbsp;</td>
+<td class="lambda-list">
+tree</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns T if the specified tree represent a block of code. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1791">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+string-bulleted-item-p&nbsp;&nbsp;</td>
+<td class="lambda-list">
+string level item-prefix-maker</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns T if the given string starts with the bulleted list prefix 
+ of the specified level. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1792">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+close-paragraph&nbsp;&nbsp;</td>
+<td class="lambda-list">
+doctree</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1793">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+split&nbsp;&nbsp;</td>
+<td class="lambda-list">
+string <em>&amp;optional</em> (word-separator '(#\  #\Tab))</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g1784">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+with-tree-loop&nbsp;&nbsp;</td>
+<td class="lambda-list">
+(var tree) <em>&amp;body</em> body</td>
+<td class="symbol-type">
+&nbsp;[Macro]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Iterates over tree elements. var, a symbol, will be bound at each iteration 
+ to the next element of the tree. 
+ </p>
+</div>
+</div>
+</div>
+<div class="cludg-footer">
+Generated by&nbsp;<a href="mailto:ihatchondo@common-lisp.net" lang="en">
+CLDOC</a>
+- 2012-02-21 18:04:56</div>
+</body>
+</html>
