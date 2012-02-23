@@ -39,6 +39,17 @@
   nil)
 
 
+(defmethod asdf:explain ((o doc-op)(c cldoc))
+  (format t "~&;;; Generating Documentation for  ~A~%" (slot-value c 'target-system)))
+
+
+(defmethod asdf:perform :around ((op doc-op) (c cldoc))
+  (format t "~&;;; Generating Documentation for ~A in directory~%;;;  ~A~%"
+    (slot-value c 'target-system)
+    (slot-value c 'asdf::absolute-pathname))
+  (call-next-method))
+
+
 (defmethod asdf:perform ((op doc-op) (c cldoc))
   (let* ((target (asdf:find-system (target-system c)))
           (path  (asdf:system-relative-pathname target
@@ -54,7 +65,8 @@
 (defun document-system (system &key force)
   "Extracts documentation from SYSTEM using ASDF and CLDOC. When
 FORCE is T, forces the operation."
-  (asdf:operate 'doc-op system :force force))
+  (asdf:operate 'doc-op system :force force)
+  (values))
 
 
 (import '(cldoc:doc-op cldoc:document-system cldoc:cldoc) :cl-user)
