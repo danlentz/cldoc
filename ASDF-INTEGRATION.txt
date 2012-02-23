@@ -1,0 +1,28 @@
+;;; EXAMPLE .asd:
+;;
+;; (in-package :cl-user)
+;;
+;; (eval-when (:load-toplevel :compile-toplevel :execute)
+;;   (asdf:load-system :cldoc))
+;;
+;; (asdf:defsystem :xxxx
+;;   :description "yyyy"
+;;   :long-description "zzzz"
+;;   :version "0.2.0"
+;;   :author "Dan Lentz"
+;;   :serial t
+;;   :components ((:file "package")
+;;                 (:file "foo")
+;;                 (:cldoc          :xxxx-documentation
+;;                                  :target-system :xxxx
+;;                   :pathname "doc/html/")))
+
+;;; EXAMPLE repl:
+;;
+;; CL-USER> (asdf:load-system :xxxx)
+;; ....
+;; CL-USER> (asdf:document-system :xxxx)
+;; ....
+;; CL-USER> (asdf:print-system :xxxx)
+;; ....
+
