@@ -21,12 +21,16 @@
 (in-package :cldoc.system)
 
 (defsystem :cldoc
+  :serial t
   :components
   ((:file "package")
-   (:file "cludg" :depends-on ("package"))
-   (:file "cache-system" :depends-on ("cludg"))
-   (:file "string-parser" :depends-on ("cludg"))
-   (:file "html" :depends-on ("cludg" "cache-system" "string-parser"))))
+    (:file "cludg")
+    (:file "cache-system")
+    (:file "string-parser")
+    (:file "html")
+    (:file "doc-op")
+    (:file "print-op")
+    ))
 
 #+:sbcl
 (defmethod perform :around (o f)

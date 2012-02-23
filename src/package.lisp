@@ -22,6 +22,12 @@
   (:nicknames cludg)
   (:use common-lisp)
   (:export
+    :print-op
+    :print-system
+    :doc-op
+    :document-system
+    :cldoc
+    
    #:*constructor-control-string* #:*predicate-control-string*
    #:*printer-control-string* 
    #:*class-inheritence* #:*condition-inheritence*
