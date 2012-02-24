@@ -32,6 +32,10 @@
     (:file "print-op")
     ))
 
+(defmethod asdf:perform :after ((op asdf:load-op) (sys (eql (asdf:find-system :cldoc))))
+  (pushnew :cldoc *features*))
+
+  
 #+:sbcl
 (defmethod perform :around (o f)
   ;; SBCL signals an error if DEFCONSTANT is asked to redefine a
