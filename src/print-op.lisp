@@ -12,19 +12,21 @@
 
 (in-package :cldoc)
 
-(defparameter *enscript-executable* "/usr/local/bin/enscript")
+(defparameter *enscript-executable* "enscript")
 
 (defclass print-op (asdf:operation)
   ((program :initarg :program  :initform *enscript-executable*)
-    ;; (layout-options   :initarg :layout-options
-    ;;   :initform (list "-U2" "-A2")
-    (heading-fontspec :initarg :heading-fontspec
-      :initform "Helvetica-BoldOblique@10")
-    (body-fontspec    :initarg :body-fontspec
-      :initform  "Courier-New@9")
-    ))
+    (indent :initarg :indent :initform 0)
+    (nup :initarg :nup :initform 2)
+    (ncol :initarg :ncol :initform 2)
+    (media :initarg :media :initform "Letter")
+    (heading-fontspec :initarg :heading-fontspec   :initform "Helvetica-BoldOblique@10")
+    (body-fontspec    :initarg :body-fontspec      :initform  "Courier-New@9")))
 
-(defmethod asdf:operation-done-p ((o print-op) c)
+(defmethod asdf:operation-done-p ((o print-op)(c asdf:source-file))
+  nil)
+
+(defmethod asdf:operation-done-p ((o print-op)(c asdf:static-file))
   nil)
 
 (defmethod asdf:operate ((o print-op)(s asdf:module) &key)
@@ -33,30 +35,38 @@
 
 
 (defmethod asdf:explain ((o print-op)(c asdf:component))
-  (format t "~&;;; printing ~A~%" (asdf:component-pathname c)))
+  (format t "~&;;; will print ~A~%" (asdf:component-pathname c)))
 
 
 (defmethod asdf:perform ((o print-op) c)
   t)
 
 (defmethod asdf:perform ((o print-op)(c asdf:source-file))
-  (format t "~&;;; printing ~A~%" (asdf:component-pathname c))
-  (sb-ext:run-program (slot-value o 'program)
-    (list "-U2" "-A2" "-M Letter"
-      "-F" (slot-value o 'heading-fontspec)
-      "-f" (slot-value o 'body-fontspec)
-      (format nil "~A" (asdf:component-pathname c)))))
-
-
+  (format t "~&;;; printing source ~A~%" (asdf:component-pathname c))
+  (asdf/run-program:run-program
+    (format nil "~A -U~D -A~D -i~Di -M ~A -F ~A -f ~A ~A"
+      (slot-value o 'program)
+      (slot-value o 'nup)
+      (slot-value o 'ncol)
+      (slot-value o 'indent)
+      (slot-value o 'media)
+      (slot-value o 'heading-fontspec)
+      (slot-value o 'body-fontspec)
+      (asdf:component-pathname c))))
+      
 (defmethod asdf:perform ((o print-op)(c asdf:static-file))
-  (format t "~&;;; printing ~A~%" (asdf:component-pathname c))
-  (sb-ext:run-program (slot-value o 'program)
-    (list "-U2" "-A2" "-M Letter"
-      "-F" (slot-value o 'heading-fontspec)
-      "-f" (slot-value o 'body-fontspec)
-      (format nil "~A" (asdf:component-pathname c)))))
-
-
+  (format t "~&;;; printing static ~A~%" (asdf:component-pathname c))
+  (asdf/run-program:run-program
+    (format nil "~A -U~D -A~D -i~Di -M ~A -F ~A -f ~A ~A"
+      (slot-value o 'program)
+      (slot-value o 'nup)
+      (slot-value o 'ncol)
+      (slot-value o 'indent)
+      (slot-value o 'media)
+      (slot-value o 'heading-fontspec)
+      (slot-value o 'body-fontspec)
+      (asdf:component-pathname c))))
+      
 (defun print-system (system)
   (let ((asdf:*asdf-verbose* t))
     (asdf:operate 'print-op (asdf:find-system system)))
