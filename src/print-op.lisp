@@ -24,6 +24,8 @@
       :initform  "Courier-New@9")
     ))
 
+(defmethod asdf:operation-done-p ((o print-op) c)
+  nil)
 
 (defmethod asdf:operate ((o print-op)(s asdf:module) &key)
   (mapc #'(lambda (spec) (apply #'asdf:perform (list (car spec) (cdr spec))))
