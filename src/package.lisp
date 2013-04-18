@@ -27,7 +27,7 @@
     :doc-op
     :document-system
     :cldoc
-    
+   #:*enscript-executable* 
    #:*constructor-control-string* #:*predicate-control-string*
    #:*printer-control-string* 
    #:*class-inheritence* #:*condition-inheritence*

@@ -12,9 +12,10 @@
 
 (in-package :cldoc)
 
+(defparameter *enscript-executable* "/usr/local/bin/enscript")
 
 (defclass print-op (asdf:operation)
-  ((program :initarg :program  :initform "/usr/bin/enscript")
+  ((program :initarg :program  :initform *enscript-executable*)
     ;; (layout-options   :initarg :layout-options
     ;;   :initform (list "-U2" "-A2")
     (heading-fontspec :initarg :heading-fontspec

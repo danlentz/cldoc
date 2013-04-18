@@ -22,7 +22,7 @@
 
 ;; Extract doc.
 
-(cludg:extract-documentation 'cludg:html "../docu"
+(cludg:extract-documentation 'cludg:html "~/site/cldoc/doc/"
   (asdf:find-system :cldoc)
   ;;:filter #'cludg::default-filter
   :table-of-contents-title "Common Lisp Universal Documentation Generator")
