@@ -31,25 +31,25 @@
 
 
 (defmethod asdf:explain ((o print-op)(c asdf:component))
-  (format t "~%;;; printing ~A~%" (asdf:component-pathname c)))
+  (format t "~&;;; printing ~A~%" (asdf:component-pathname c)))
 
 
 (defmethod asdf:perform ((o print-op) c)
   t)
 
 (defmethod asdf:perform ((o print-op)(c asdf:source-file))
-  (format t "~%;;; printing ~A~%" (asdf:component-pathname c))
+  (format t "~&;;; printing ~A~%" (asdf:component-pathname c))
   (sb-ext:run-program (slot-value o 'program)
-    (list "-U2" "-A2"
+    (list "-U2" "-A2" "-M Letter"
       "-F" (slot-value o 'heading-fontspec)
       "-f" (slot-value o 'body-fontspec)
       (format nil "~A" (asdf:component-pathname c)))))
 
 
 (defmethod asdf:perform ((o print-op)(c asdf:static-file))
-  (format t "~%;;; printing ~A~%" (asdf:component-pathname c))
+  (format t "~&;;; printing ~A~%" (asdf:component-pathname c))
   (sb-ext:run-program (slot-value o 'program)
-    (list "-U2" "-A2"
+    (list "-U2" "-A2" "-M Letter"
       "-F" (slot-value o 'heading-fontspec)
       "-f" (slot-value o 'body-fontspec)
       (format nil "~A" (asdf:component-pathname c)))))
