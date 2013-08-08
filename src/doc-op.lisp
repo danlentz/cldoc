@@ -50,6 +50,16 @@
   (call-next-method))
 
 
+(defmethod asdf:perform ((op doc-op)(c asdf:system))
+  (let* ((target c)
+          (path  (asdf:system-relative-pathname target "doc/api/")))
+    (unless (find-package :cldoc)  (asdf:operate 'asdf:load-op :cldoc))
+    (funcall (intern (string 'extract-documentation) :cldoc)
+      (intern (string 'html) :cldoc) (namestring path) target)
+;    (format t path)
+    ))
+
+
 (defmethod asdf:perform ((op doc-op) (c cldoc))
   (let* ((target (asdf:find-system (target-system c)))
           (path  (asdf:system-relative-pathname target
@@ -59,8 +69,8 @@
                                'asdf::relative-pathname)))))
     (unless (find-package :cldoc)  (asdf:operate 'asdf:load-op :cldoc))
     (funcall (intern (string 'extract-documentation) :cldoc)
-      (intern (string 'html) :cldoc) (namestring path) target)))
-
+      (intern (string 'html) :cldoc) (namestring path) target)
+    ))
 
 (defun document-system (system &key force)
   "Extracts documentation from SYSTEM using ASDF and CLDOC. When

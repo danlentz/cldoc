@@ -22,6 +22,7 @@
 
 (defsystem :cldoc
   :serial t
+  :depends-on (:uiop)
   :components
   ((:file "package")
     (:file "cludg")
